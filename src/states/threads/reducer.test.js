@@ -48,7 +48,7 @@ describe('threads reducer', () => {
     const nextState = threadsReducer(initialState, action);
     expect(nextState).toEqual(action.payload.threads);
   });
-  it('should return the threads with the new talk when given by ADD_THREAD action', () => {
+  it('should return the threads with the new thread when given by ADD_THREAD action', () => {
     const initialState = [
       {
         'id': 'thread-1',
