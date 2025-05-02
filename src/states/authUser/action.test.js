@@ -4,6 +4,8 @@ import { asyncSetAuthUser } from './action';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import { setAuthUserActionCreator } from './action';
 
+// skenario authuser => unit test thunkFunction
+// mengembalikan token ketika proses login
 const fakeUserAuth = {
   email: 'emailFake',
   password: 'passwordFake'

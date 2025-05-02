@@ -4,14 +4,14 @@ import Button from "../Elements/Button";
 import PropTypes from "prop-types";
 import useInput from "../../hooks/useInput";
 const FormLogin = ({ authLogin }) => {
-  const [email, onChangeEmail] = useInput();
-  const [password, onPasswordHandler] = useInput();
+  const [email, onChangeEmail] = useInput('');
+  const [password, onPasswordHandler] = useInput('');
   const onSubmitHandler = (event) => {
     event.preventDefault();
     authLogin({ email, password });
   };
   return (
-    <form onSubmit={onSubmitHandler} className="form-auth">
+    <form onClick={onSubmitHandler} className="form-auth">
       <InputForm
         name="email"
         type="email"

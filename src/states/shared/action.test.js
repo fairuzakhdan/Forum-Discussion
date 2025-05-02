@@ -5,7 +5,7 @@ import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import { receiveUsersActionCreator } from '../user/action';
 import { receiveThreadActionCreator } from '../threads/action';
 
-// action skenario => unit test thunkFunction
+// skenario asyncthreadandUser => unit test thunkFunction
 // - mengembalikan data thread dan user jika berhasil
 // - mengembalikan alert jika gagal
 const fakeThreadsResponse = [
