@@ -1,10 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { threadsReducer } from './reducer';
 
-// threads reducer skenario
+// threads reducer skenario => unit test
 // - mengembalikan state kosong jika action unknown
 // - mengembalikan data state threads jika actionnya RECEIVE_THREADS
 // - mengembalikan nilai baru pada state threads jika actionnya  ADD_THREAD dan payload thread
+// - mengembalikan data baru pada state threads dengan atribut upVotesBy jika actionnya UP_VOTE_THREAD
 
 describe('threads reducer', () => {
   it('should return the initial state when given by unknown action', () => {
