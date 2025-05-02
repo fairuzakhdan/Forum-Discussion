@@ -55,7 +55,6 @@ export const asyncThread = ({ title, body, category }) => async (dispatch) => {
   } catch (err) {
     alert(err.message);
   }
-
   dispatch(hideLoading());
 };
 
@@ -68,7 +67,6 @@ export const asyncUpVoteThread = (threadId) => async (dispatch, getState) => {
   } catch (err) {
     alert(err.message);
   }
-
   dispatch(hideLoading());
 };
 
@@ -81,7 +79,6 @@ export const asyncDownVoteThread = (threadId) => async (dispatch, getState) => {
   } catch (err) {
     alert(err.message);
   }
-
   dispatch(hideLoading());
 };
 
