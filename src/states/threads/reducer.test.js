@@ -103,5 +103,17 @@ describe('threads reducer', () => {
         userId: 'users-1'
       }
     };
+    const nextState = threadsReducer(initialState, action);
+    expect(nextState).toEqual(initialState.map((thread) => {
+      if (thread.id === action.payload.threadId) {
+        const isUpVotedUp = thread.upVotesBy.includes(action.payload.userId);
+        return {
+          ...thread,
+          upVotesBy: isUpVotedUp ? thread.upVotesBy.filter((user) => user !== action.payload.userId) : [...thread.upVotesBy, action.payload.userId],
+          downVotesBy: thread.downVotesBy.filter((user) => user !== action.payload.userId)
+        };
+      };
+      return thread;
+    }));
   });
 });
