@@ -81,4 +81,27 @@ describe('threads reducer', () => {
     const nextState = threadsReducer(initialState, action);
     expect(nextState).toEqual([...initialState, action.payload.thread]);
   });
+
+  it('should return the vote liked thread with action type UP_VOTE_THREAD', () => {
+    const initialState = [
+      {
+        'id': 'thread-1',
+        'title': 'Thread Pertama',
+        'body': 'Ini adalah thread pertama',
+        'category': 'General',
+        'createdAt': '2021-06-21T07:00:00.000Z',
+        'ownerId': 'users-1',
+        'upVotesBy': [],
+        'downVotesBy': [],
+        'totalComments': 0
+      }
+    ];
+    const action = {
+      type: 'UP_VOTE_THREAD',
+      payload: {
+        threadId: 'thread-1',
+        userId: 'users-1'
+      }
+    };
+  });
 });
