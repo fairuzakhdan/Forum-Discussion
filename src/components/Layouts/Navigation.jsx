@@ -21,7 +21,7 @@ const Navigation = ({ authUser, signOut, theme}) => {
   return (
     <>
       <div className={`header-navigation ${currentTheme[theme]}`}>
-        <p>ThreadifyId</p>
+        <p>Threadify</p>
         {authUser && (
           <div className="user-profile">
             <p>{authUser.name}</p>
