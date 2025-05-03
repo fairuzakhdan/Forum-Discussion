@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-const Button = ({ variant, children, type = "button", onClick = () => {}, theme }) => {
-  const colorButton = {
-    dark: 'gray',
-    light: 'white'
+const Button = ({ variant, children, type = "button", onClick = () => {},theme}) => {
+  const themeClass = {
+    dark: "btn-dark",
+    light: "btn-light",
   }
   return (
-    <button className={`btn-default ${variant}`} type={type} onClick={onClick} style={{color: colorButton[theme]}}>
+    <button className={`btn-default ${themeClass[theme]} ${variant}`} type={type} onClick={onClick}>
       {children}
     </button>
   );
 };
 Button.propTypes = {
+  theme: PropTypes.oneOf(['dark', 'light']),
   variant: PropTypes.string,
   children: PropTypes.node,
   type: PropTypes.string.isRequired,

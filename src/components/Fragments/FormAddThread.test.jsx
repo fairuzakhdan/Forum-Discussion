@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import FormAddThread from "./FormAddThread";
 
-// skenario component test
+// skenario react component test
 // - harus ada event add thread ketika button diklik
 
 expect.extend(matchers)

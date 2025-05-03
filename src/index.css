@@ -419,3 +419,7 @@ button {
   top: 0;
   z-index: 9999;
 }
+.theme-dark {
+  background-color: rgb(31, 31, 31);
+  color: #fff;
+}
