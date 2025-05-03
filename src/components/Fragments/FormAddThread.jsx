@@ -4,8 +4,8 @@ import useInput from "../../hooks/useInput";
 import Button from "../Elements/Button";
 import PropTypes from "prop-types";
 const FormAddThread = ({ addThread }) => {
-  const [title, onChangeAddTitleThread] = useInput();
-  const [category, onChangeAddcategoryThread] = useInput();
+  const [title, onChangeAddTitleThread] = useInput('');
+  const [category, onChangeAddcategoryThread] = useInput('');
   const [body, setBody] = useState("");
   const onAddThread = (event) => {
     event.preventDefault();
@@ -35,6 +35,7 @@ const FormAddThread = ({ addThread }) => {
       <div
         className="input-comment"
         data-placeholder="Masukan Isi Catatan ...."
+        data-testid="input-comment"
         contentEditable
         onInput={inputThreadBody}
       />
