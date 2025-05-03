@@ -1,0 +1,17 @@
+.btn-light {
+  background-color: transparent !important;
+  color: #d1cdcd !important;
+  font-size: 2rem !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: none;
+}
+
+.btn-dark {
+  background-color: transparent !important;
+  border: none;
+  color: rgb(5, 5, 5) !important;
+  font-size: 2rem !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+}

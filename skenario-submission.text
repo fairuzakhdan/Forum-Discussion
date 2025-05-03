@@ -1,0 +1,27 @@
+* Automation Testing
+  = skenario threads reducer => unit test
+    1.mengembalikan state kosong jika action unknown
+    2.mengembalikan data state threads jika actionnya RECEIVE_THREADS
+    3.mengembalikan nilai baru pada state threads jika actionnya  ADD_THREAD dan payload thread
+    4.mengembalikan data baru pada state threads dengan atribut upVotesBy jika actionnya UP_VOTE_THRE4D
+
+  = skenario unit test thunkFunction
+    1.mengembalikan data thread dan user jika berhasil (asyncthreadandUser)
+    2.mengembalikan alert jika gagal (asyncthreadandUser)
+    3.mengembalikan token ketika proses login (authuser)
+
+  = skenario react component test  
+    1.harus menangani email input (Form Login)
+    2.harus menangani password input (Form Login)
+    3.harus ada event login ketika button diklik (Form Login)
+    4.harus ada event add thread ketika button diklik (FormAddThread)
+
+  = Skenario e2e test login
+    1.harus menampilkan halaman login dengan benar
+    2.harus menampilkan peringatan ketika email pengguna kosong
+    3.harus menampilkan peringatan ketika kata sandi kosong
+    4.harus menampilkan peringatan ketika email pengguna dan kata sandi salah
+    5.harus menampilkan beranda ketika email pengguna dan kata sandi benar
+
+
+
