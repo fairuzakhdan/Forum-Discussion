@@ -15,8 +15,8 @@ Button.propTypes = {
   theme: PropTypes.oneOf(['dark', 'light']),
   variant: PropTypes.string,
   children: PropTypes.node,
-  type: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  type: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Button;
