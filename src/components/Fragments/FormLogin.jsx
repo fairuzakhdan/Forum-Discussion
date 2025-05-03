@@ -8,10 +8,11 @@ const FormLogin = ({ authLogin }) => {
   const [password, onPasswordHandler] = useInput('');
   const onSubmitHandler = (event) => {
     event.preventDefault();
+    console.log({ email, password });
     authLogin({ email, password });
   };
   return (
-    <form onClick={onSubmitHandler} className="form-auth">
+    <form className="form-auth" data-testid="form-login">
       <InputForm
         name="email"
         type="email"
@@ -32,7 +33,7 @@ const FormLogin = ({ authLogin }) => {
         onChange={onPasswordHandler}
         value={password}
       />
-      <Button type="submit" variant="btn-auth">
+      <Button onClick={onSubmitHandler} variant="btn-auth">
         Login
       </Button>
     </form>

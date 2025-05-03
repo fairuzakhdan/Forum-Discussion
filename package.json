@@ -9,7 +9,8 @@
     "lint": "eslint ./src",
     "fix": "npx eslint . --fix",
     "preview": "vite preview",
-    "test": "vitest --no-watch"
+    "test": "vitest --no-watch",
+    "e2e": "cypress run"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
@@ -28,9 +29,11 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "cypress": "^14.3.2",
     "eslint": "^9.25.1",
     "eslint-config-dicodingacademy": "^0.9.4",
     "eslint-config-xo": "^0.46.0",
+    "eslint-plugin-cypress": "^4.3.0",
     "globals": "^15.15.0",
     "jsdom": "^26.1.0",
     "vite": "^6.2.0",

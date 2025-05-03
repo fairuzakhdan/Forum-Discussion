@@ -12,7 +12,7 @@ const FormRegister = ({ authRegister }) => {
     authRegister({ name, email, password });
   };
   return (
-    <form onSubmit={onSubmitHandler} className="form-auth">
+    <form className="form-auth">
       <InputForm
         type="text"
         name="username"
@@ -43,7 +43,7 @@ const FormRegister = ({ authRegister }) => {
         onChange={onPasswordHandler}
         value={password}
       />
-      <Button type="submit" variant="btn-auth">
+      <Button onClick={onSubmitHandler} variant="btn-auth">
         Register
       </Button>
     </form>
