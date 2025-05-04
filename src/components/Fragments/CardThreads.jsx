@@ -8,9 +8,9 @@ const Card = ({ children }) => {
 const Header = ({ title, category, threadId }) => {
   return (
     <header className="card-header">
-      <span className="category-card">#{category}</span>
+      <span className="category-card" data-testid="card-category">#{category}</span>
       <h3>
-        <Link to={`/threads/${threadId}`} className="title-card-header">
+        <Link to={`/threads/${threadId}`} className="title-card-header" data-testid="card-title"> 
           {title}
         </Link>
       </h3>
@@ -21,6 +21,7 @@ const Header = ({ title, category, threadId }) => {
 const Body = ({ body }) => {
   return (
     <div
+    data-testid="card-body"
       className="card-body"
       dangerouslySetInnerHTML={{ __html: body.substring(0, 268) + "..." }}
     />

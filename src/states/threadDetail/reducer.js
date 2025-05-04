@@ -17,7 +17,7 @@ export const threadDetailReducer = (threadDetail = null, action = {}) => {
     return {
       ...threadDetail,
       downVotesBy: threadDetail.downVotesBy.includes(action.payload.userId)
-        ? threadDetail.downVotesBy // Jika sudah downvote, biarkan tetap
+        ? threadDetail.downVotesBy
         : [...threadDetail.downVotesBy, action.payload.userId],
       upVotesBy: threadDetail.upVotesBy.filter(
         (id) => id !== action.payload.userId

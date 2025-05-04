@@ -18,7 +18,7 @@ export const asyncPreloadProcess = () => async (dispatch) => {
   try {
     const user = await api.getOwnProfile();
     dispatch(setAuthUserActionCreator(user));
-    // eslint-disable-next-line no-unused-vars
+
   } catch (err) {
     // Dispatch(setAuthUserActionCreator(null));
     dispatch(setAuthUserActionCreator(null));

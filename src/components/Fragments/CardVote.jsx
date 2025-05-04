@@ -23,6 +23,7 @@ const CardVote = ({
     <footer className="card-footer">
       <div className="card-vote">
         <Button
+        label="addVote"
           onClick={() => likeVote(id)}
           variant={isUpVote ? "upLike" : ""}
         >

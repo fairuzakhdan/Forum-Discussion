@@ -1,27 +1,25 @@
 import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 import daStyle from 'eslint-config-dicodingacademy';
-import pluginCypress from 'eslint-plugin-cypress'
+import pluginCypress from 'eslint-plugin-cypress';
 
 export default defineConfig([
-  daStyle,
-  pluginCypress.configs.recommended,
   {
-    files: ['**/*.js'],
+    ignores: ['dist/**'],
+  },
+  daStyle,
+  {
+    files: ['**/*.cy.js', '**/*.spec.js'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      globals: {
-        alert: 'readonly',
-        fetch: 'readonly',
-        localStorage: 'readonly',
-      },
     },
-    plugins: { js },
-    extends: ['js/recommended'],
+    plugins: {
+      cypress: pluginCypress,
+    },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-undef': 'warn',
+      'cypress/no-unnecessary-waiting': 'warn',
+      'cypress/no-force': 'warn',
     },
   },
 ]);

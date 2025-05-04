@@ -2,10 +2,10 @@
 const preview = {
   parameters: {
     controls: {
-      persistLocalState: false, 
+      persistLocalState: false,
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
   },
