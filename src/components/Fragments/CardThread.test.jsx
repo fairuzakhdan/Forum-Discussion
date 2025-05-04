@@ -4,6 +4,8 @@ import { describe, it } from 'vitest';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 
+// skenario  
+// - harus mengembalikan Card dengan Header dan Body
 
 describe('should render card content', () => {
   it('should render Card with Header and Body', () => {
